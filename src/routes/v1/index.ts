@@ -1,9 +1,8 @@
 import { Router } from "express";
+import githubRoutes from "./githubRoutes";
 
 const router = Router();
 
-router.get("/", (req, res) => {
-    res.json({ message: "Hello World test" });
-})
+router.use("/github", githubRoutes);
 
 export default router;
